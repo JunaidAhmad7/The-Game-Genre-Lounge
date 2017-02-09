@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Action-Adventure Genre - The Game Genre Lounge</title>
+<link rel="stylesheet" href="style.css">
+<script src="jquery-1.11.3.min.js"></script>
+<script>
+
+$(document).ready(function() { // do not delete this line
+	$('#vidtxt').hide();
+	$('#vidtxt2').hide();
+	$('#content video').attr('muted', true); //starts the video muted
+
+	$('video').bind('timeupdate', function() {
+		var playTime = Math.round( $(this).get(0).currentTime );
+		if(playTime < 38) {
+			$('#vidtxt').show();
+		}
+		if(playTime > 38) {
+			$('#vidtxt').hide();
+		}
+		if(playTime > 38) {
+			$('#vidtxt2').show();
+		}
+		if(playTime > 102) {
+			$('#vidtxt2').hide();
+		}
+		if(playTime < 38) {
+			$('#vidtxt2').hide();
+		}
+	});
+}); // do not delete this line
+</script>
+</head>
+<body>
+	
+	<nav>
+		<ul>
+			<a href = "index.html"><li>Home</li></a>
+			<a href = "actionadventure.html"><li>Action-Adventure</li></a>
+			<a href = "roleplaying.html"><li>Role-Playing</li></a>
+			<a href = "shooter.html"><li>Shooter</li></a>
+			<a href = "sport.html"><li>Sports</li></a>
+		</ul>
+	</nav>
+	<div id = "content">
+		<h1>
+			Action-Adventure Genre
+		</h1>
+			<video controls autoplay>
+				<source src="videos/ActionAdventure.mp4">
+				<p>Your browser doesn’t support HTML5. Please upgrade.</p>
+			</video>
+				<section id = 'vidtxt'>
+					Grand Theft Auto V
+				</section>
+				<section id = 'vidtxt2'>
+					Batman Arkham Knight
+				</section>
+		<h2>
+			Elements of the Genre
+		</h2>
+		<section>
+		The action-adventure genre is a blend of two popular genres; action and adventure. Characteristics from both of these genres are present in this genre. It combines the fast paced, real time action seen in action games, along with the narrative elements, exploration, and puzzles of adventure games. The genre is becoming increasingly popular due to the great story elements which are infused with combat and exciting action. 
+		<br/><br/>
+		A few popular Action-Adventure games include The <a href = "https://en.wikipedia.org/wiki/Grand_Theft_Auto_(series)">Grand Theft Auto</a> franchise, one of the most popular video game franchises ever, gives the player controls of many different characters with their own narratives and agenda's involving drugs, violence and crime. <a href = "https://en.wikipedia.org/wiki/Assassin%27s_Creed">Assassin's Creed </a> puts players in control of fictional assassins in historically accurate represenations of cities such as Rome and London. The recent <a href = "https://en.wikipedia.org/wiki/Batman:_Arkham">Batman: Arkham </a> trilogy puts the player in a crime fighting Batman looking to stop the Joker's antics in Gotham.
+		</section>
+		<div id = "elementsOfGenre">
+			<figure>
+				<img src = "images/mystery.png" alt = "Mystery"/>
+			</figure>
+			<figure>
+				<img src = "images/puzzle.png" alt = "Puzzle"/>
+			</figure>
+			<figure>
+				<img src = "images/newviolence.png" alt = "Violence"/>
+			</figure>
+			<figure>
+				<img src = "images/narrative.png" alt = "Narrative"/>
+			</figure>
+			<figure>
+				<img src = "images/newcompanions.png" alt = "Companions"/>
+			</figure>
+			<figure>
+				<img src = "images/collectives.png" alt = "Collectives"/>
+			</figure>
+		</div>
+	</div>
+</body>
+</html>

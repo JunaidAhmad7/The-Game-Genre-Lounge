@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Game Genre Lounge</title>
+<link rel="stylesheet" href="animate.css">
+<script src="jquery-1.11.3.min.js"></script>
+<script>
+
+$(document).ready(function() { // do not delete this line
+	$('li').addClass('animated fadeInRightBig');
+
+	$('section').addClass('animated rotateInUpRight');
+	
+	$('ul li img').mouseover(function() {
+		$('li').removeClass('animated fadeInRightBig');
+		
+		$(this).addClass('animated shake');
+		
+		var name = $(this).attr('alt'); //grab the alt info of the image (code by Kobi)
+		// http://stackoverflow.com/questions/12527433/correct-way-of-comparing-string-jquery-operator
+		if (name === 'Sports') {
+			$('body').css({
+				backgroundImage: 'url("images/sportsback.jpg")',
+				backgroundRepeat: 'no-repeat center center fixed',
+				backgroundSize: 'cover',
+				'-webkit-background-size' : 'cover'				
+			});
+		}
+		else if (name === 'Shooter') {
+			$('body').css({
+				backgroundImage: 'url("images/shooterback.png")',
+				backgroundRepeat: 'no-repeat center center fixed',
+				backgroundSize: 'cover',
+				'-webkit-background-size' : 'cover'	
+			});
+		} 
+		else if (name === 'Action-Adventure') {
+			$('body').css({
+				backgroundImage: 'url("images/actionadventureback.jpg")',
+				backgroundRepeat: 'no-repeat center center fixed',
+				backgroundSize: 'cover',
+				'-webkit-background-size' : 'cover'	
+			});
+		}
+		
+		else {
+			$('body').css({
+				backgroundImage: 'url("images/roleplayingback.png")',
+				backgroundRepeat: 'no-repeat center center fixed',
+				backgroundSize: 'cover',
+				'-webkit-background-size' : 'cover'	
+			});
+		}
+		
+	}).mouseout(function() {
+		$(this).removeClass('animated shake');
+	});
+	
+}); // do not delete this line
+</script>
+</head>
+<body>
+
+	<h1>
+		The Game <br/> Genre Lounge
+	</h1>
+	
+	<ul>
+		<li> <a href = "actionadventure.html"> <img src = "images/xboxActionAdventure.png" alt = "Action-Adventure"/> </a> </li>
+		<li> <a href = "roleplaying.html"> <img src = "images/xboxRolePlaying.png" alt = "Role Playing"/> </a> </li>
+		<li> <a href = "shooter.html"> <img src = "images/xboxShooter.png" alt = "Shooter"/> </a> </li>
+		<li> <a href = "sport.html"> <img src = "images/xboxSport.png" alt = "Sports"/> <a> </li>
+	</ul>
+	
+	<section>
+		Video games can be characterised into many different genres. <br/>
+		Learn about a few of these popular genres in The Game Genre Lounge. <br/>
+		Pick a game off the shelf to get started.
+	</section>
+	
+	<div>
+		<img id = "couch" src = "images/couch.png" alt = "Couch"/>
+	</div>
+
+</body>
+</html>

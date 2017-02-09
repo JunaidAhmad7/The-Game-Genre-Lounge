@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Role-Playing Genre - The Game Genre Lounge</title>
+<link rel="stylesheet" href="style.css">
+<script src="jquery-1.11.3.min.js"></script>
+<script>
+
+$(document).ready(function() { // do not delete this line
+	$('#vidtxt').hide();
+	$('#vidtxt2').hide();
+	$('#content video').attr('muted', true); //starts the video muted
+
+	$('video').bind('timeupdate', function() {
+		var playTime = Math.round( $(this).get(0).currentTime );
+		if(playTime < 32) {
+			$('#vidtxt').show();
+		}
+		if(playTime > 32) {
+			$('#vidtxt').hide();
+		}
+		if(playTime > 32) {
+			$('#vidtxt2').show();
+		}
+		if(playTime > 85) {
+			$('#vidtxt2').hide();
+		}
+		if(playTime < 32) {
+			$('#vidtxt2').hide();
+		}
+	});
+}); // do not delete this line
+</script>
+</head>
+<body>
+	
+	<nav>
+		<ul>
+			<a href = "index.html"><li>Home</li></a>
+			<a href = "actionadventure.html"><li>Action-Adventure</li></a>
+			<a href = "roleplaying.html"><li>Role-Playing</li></a>
+			<a href = "shooter.html"><li>Shooter</li></a>
+			<a href = "sport.html"><li>Sports</li></a>
+		</ul>
+	</nav>
+	<div id = "content">
+		<h1>
+			Role-Playing Genre
+		</h1>
+			<video controls autoplay>
+				<source src="videos/RolePlaying.mp4">
+				<p>Your browser doesn’t support HTML5. Please upgrade.</p>
+			</video>
+				<section id = 'vidtxt'>
+					The Witcher 3: Wild Hunt
+				</section>
+				<section id = 'vidtxt2'>
+					Dragon Age Inquisition
+				</section>
+		<h2>
+			Elements of the Genre
+		</h2>
+		<section>
+		In role-playing games, the player takes control of a character usually with their own persona and agenda. The character that a user plays usually has their own species, race,  gender, appearance as well as occupation. Role-playing game characters generally have attributes and abilities such as strength, health and stamina that are numerically represented in the game. The role-playing genre typically feature multiple quest lines, deadly foes and an inventory system to hold items found throughout the game such as weapons and quest items.
+		<br/> <br/>
+		Popular role playing games include <a href = "https://en.wikipedia.org/wiki/The_Elder_Scrolls">The Elder Scrolls </a> by Bethesda Softworks, <a href = "https://en.wikipedia.org/wiki/Dragon_Age">Dragon Age </a>, <a href = "https://en.wikipedia.org/wiki/The_Witcher_(video_game)">The Witcher</a> series by Polish studio Projekt Red and <a href = "https://en.wikipedia.org/wiki/World_of_Warcraft">World of Warcraft</a> which classifies as a Massively Multiplayer Online Role-Playing Game(MMORPG).
+		</section>
+		<div id = "elementsOfGenre">
+			<figure>
+				<img src = "images/fantasy.png" alt = "Fantasy"/>
+			</figure>
+			<figure>
+				<img src = "images/newawards.png" alt = "Awards"/>
+			</figure>
+			<figure>
+				<img src = "images/narrative.png" alt = "Narrative"/>
+			</figure>
+			<figure>
+				<img src = "images/newcompanions.png" alt = "Companions"/>
+			</figure>
+			<figure>
+				<img src = "images/collectives.png" alt = "Collectives"/>
+			</figure>
+		</div>
+	</div>
+</body>
+</html>

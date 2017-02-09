@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Shooter Genre - The Game Genre Lounge</title>
+<link rel="stylesheet" href="style.css">
+<script src="jquery-1.11.3.min.js"></script>
+<script>
+
+$(document).ready(function() { // do not delete this line
+	$('#vidtxt').hide();
+	$('#vidtxt2').hide();
+	$('#content video').attr('muted', true); //starts the video muted
+
+	$('video').bind('timeupdate', function() {
+		var playTime = Math.round( $(this).get(0).currentTime );
+		if(playTime < 27) {
+			$('#vidtxt').show();
+		}
+		if(playTime > 27) {
+			$('#vidtxt').hide();
+		}
+		if(playTime > 27) {
+			$('#vidtxt2').show();
+		}
+		if(playTime > 90) {
+			$('#vidtxt2').hide();
+		}
+		if(playTime < 27) {
+			$('#vidtxt2').hide();
+		}
+	});
+}); // do not delete this line
+</script>
+</head>
+<body>
+	
+	<nav>
+		<ul>
+			<a href = "index.html"><li>Home</li></a>
+			<a href = "actionadventure.html"><li>Action-Adventure</li></a>
+			<a href = "roleplaying.html"><li>Role-Playing</li></a>
+			<a href = "shooter.html"><li>Shooter</li></a>
+			<a href = "sport.html"><li>Sports</li></a>
+		</ul>
+	</nav>
+	<div id = "content">
+		<h1>
+			Shooter Genre
+		</h1>
+			<video controls autoplay>
+				<source src="videos/Shooter.mp4">
+				<p>Your browser doesn’t support HTML5. Please upgrade.</p>
+			</video>
+				<section id = 'vidtxt'>
+					Counter-Strike: Global Offensive
+				</section>
+				<section id = 'vidtxt2'>
+					Battlefield 4
+				</section>
+		<h2>
+			Elements of the Genre
+		</h2>
+		<section>
+			Shooter games involve the player destroying various objects or enemies with a weapon, typically a gun. Shooters require the player to survive be defeating enemies while usually playing as a character in the game following a story. Shooter games range from first person shooters where the player sees through characters point of view while in the game, to third person where the character is controlled by the user looking from behind the character in the game. 
+			<br/> <br/>
+			Older shooters such as <a href = "https://en.wikipedia.org/wiki/Wolfenstein_(series)">Wolfenstein</a> and <a href = "https://en.wikipedia.org/wiki/Quake_(series)">Quake</a> were fast paced fiction based shooters where as today there are many shooters that range from military simulators such as <a href = "https://en.wikipedia.org/wiki/ARMA_(series)">Arma</a> to large expansive fictional words that span numerous iterations such as <a href = "https://en.wikipedia.org/wiki/Halo_(series)">Halo</a>.
+		</section>
+		<div id = "elementsOfGenre">
+			<figure>
+				<img src = "images/newviolence.png" alt = "Violence"/>
+			</figure>
+			<figure>
+				<img src = "images/blood.png" alt = "Gore/Blood"/>
+			</figure>
+			<figure>
+				<img src = "images/narrative.png" alt = "Narrative"/>
+			</figure>
+			<figure>
+				<img src = "images/newcompanions.png" alt = "Companions"/>
+			</figure>
+		</div>
+	</div>
+</body>
+</html>

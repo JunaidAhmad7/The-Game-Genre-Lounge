@@ -1,0 +1,99 @@
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P|Wallpoet);
+
+html {
+
+}
+
+body {
+	margin: 0px;
+	background: -webkit-linear-gradient(black 45%, #226666 95%); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(black 45%, #226666 95%); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(black 45%, #226666 95%); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(black 45%, #226666 95%); /* Standard syntax */ 
+}
+
+a {
+	color: #7A9F35;
+	text-decoration: none;
+}
+
+nav {
+	top: 0;
+	position: fixed;
+	width: 100%;
+	z-index: 9999;
+}
+
+nav ul {
+	background-color: #7A9F35;
+	overflow: hidden;
+	color: white;
+	padding: 0;
+	text-align: center;
+	margin: 0;
+	font-family: 'PT Sans', sans-serif;
+	-webkit-transition: max-height 0.4s;
+	-ms-transition: max-height 0.4s;
+	-moz-transition: max-height 0.4s;
+	-o-transition: max-height 0.4s;
+	transition: max-height 0.4s;
+}
+
+nav ul li {
+	color: white;
+	display: inline-block;
+	padding: 15px;
+}
+
+nav ul li:hover {
+	background-color: #399077;
+}
+
+#content {
+	margin-top: 66px;
+}
+
+#content video {
+	width: 100%;
+	height: 480px;
+	position: relative;
+}
+
+#elementsOfGenre {
+	width: 100%;
+	text-align: center;
+}
+
+figure {
+	display: inline-block;
+}
+
+figure img {
+	height:200px;
+	width: 200px
+}
+
+section {
+	font-family: 'PT Sans', sans-serif;
+	font-size: 1.6em;
+	padding-left: 20%;
+	padding-right: 20%;
+	padding-top: 1%;
+	padding-bottom: 2%;
+	color: #ffffff;
+	text-align: center;
+}
+
+h1 {
+	margin-top: 5%;
+	font-family: 'Press Start 2P', cursive;
+	color: #ffffff;
+	text-align: center;
+}
+
+h2 {
+	margin-top: 2%;
+	font-family: 'Press Start 2P', cursive;
+	color: #ffffff;
+	text-align: center;
+}

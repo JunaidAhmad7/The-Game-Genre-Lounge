@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sports Genre - The Game Genre Lounge</title>
+<link rel="stylesheet" href="style.css">
+<script src="jquery-1.11.3.min.js"></script>
+<script>
+
+$(document).ready(function() { // do not delete this line
+	$('#vidtxt').hide();
+	$('#vidtxt2').hide();
+	$('#content video').attr('muted', true); //starts the video muted
+	
+	$('video').bind('timeupdate', function() {
+		var playTime = Math.round( $(this).get(0).currentTime );
+		if(playTime < 34) {
+			$('#vidtxt').show();
+		}
+		if(playTime > 34) {
+			$('#vidtxt').hide();
+		}
+		if(playTime > 34) {
+			$('#vidtxt2').show();
+		}
+		if(playTime > 110) {
+			$('#vidtxt2').hide();
+		}
+		if(playTime < 34) {
+			$('#vidtxt2').hide();
+		}
+	});
+}); // do not delete this line
+</script>
+</head>
+<body>
+	
+	<nav>
+		<ul>
+			<a href = "index.html"><li>Home</li></a>
+			<a href = "actionadventure.html"><li>Action-Adventure</li></a>
+			<a href = "roleplaying.html"><li>Role-Playing</li></a>
+			<a href = "shooter.html"><li>Shooter</li></a>
+			<a href = "sport.html"><li>Sports</li></a>
+		</ul>
+	</nav>
+	<div id = "content">
+		<h1>
+			Sports Genre
+		</h1>
+			<video controls autoplay>
+				<source src="videos/Sport.mp4">
+				<p>Your browser doesn’t support HTML5. Please upgrade.</p>
+			</video>
+				<section id = 'vidtxt'>
+					NBA 2K16
+				</section>
+				<section id = 'vidtxt2'>
+					Forza Motorsport 6
+				</section>
+		<h2>
+			Elements of the Genre
+		</h2>
+		<section>
+		The sports genre involves simulating the experience of playing a fictional or non-fictional sport. Games of this genre allow the player to play as a participant of a sporting event, which can involve working as a team, or competing individually, depending on the type of sport being simulated. While this is the main aspect of the game, the player may also take on responsibility over strategies behind the sport, involving them in decision making processes which can affect gameplay. 
+		<br/> <br/>	
+		Annually, <a href = "https://en.wikipedia.org/wiki/FIFA_(video_game_series)">FIFA </a> games continue to sell millions worldwide due to the popularity of the sport all over the world. Similarly sports games such as <a href = "https://en.wikipedia.org/wiki/NBA_2K_(series)">NBA 2K </a> and <a href = "https://en.wikipedia.org/wiki/Madden_NFL">Madden NFL </a> simulate the Sport with photorealistic representations of the athletes. Motorsport games such as <a href = "https://en.wikipedia.org/wiki/Need_for_Speed">Need For Speed </a> present gamers with a more arcadey approach to racers whereas franchises such as <a href = "https://en.wikipedia.org/wiki/Forza_Motorsport">Forza Motorsport</a> and <a href = "https://en.wikipedia.org/wiki/Project_CARS">Project Cars</a> aim to replicate the sensation of driving a supercar at top speeds around famous tracks across the world. 
+		</section>
+		<div id = "elementsOfGenre">
+			<figure>
+				<img src = "images/newawards.png" alt = "Awards"/>
+			</figure>
+			<figure>
+				<img src = "images/competition.png" alt = "Competition"/>
+			</figure>
+			<figure>
+				<img src = "images/management.png" alt = "Management"/>
+			</figure>
+		</div>
+	</div>
+</body>
+</html>
